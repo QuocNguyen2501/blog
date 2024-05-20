@@ -5,7 +5,11 @@
   "projects": {
     "myblog": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -26,7 +30,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/purple-green.css",
-              "src/styles.css"
+              "src/styles.sass"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -105,7 +109,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/purple-green.css",
-              "src/styles.css"
+              "src/styles.sass"
             ],
             "scripts": []
           }
