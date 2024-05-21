@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MediumService } from '../providers/medium.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, of, switchMap, take } from 'rxjs';
@@ -12,7 +12,8 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ],
   templateUrl: './post.component.html',
-  styleUrl: './post.component.sass'
+  styleUrl: './post.component.sass',
+  encapsulation: ViewEncapsulation.None
 })
 export class PostComponent implements OnInit{
   

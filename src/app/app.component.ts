@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
     styleUrl: './app.component.sass',
     imports: [
       RouterOutlet, 
-      HttpClientModule
+      HttpClientModule,
     ]
 })
 export class AppComponent {
