@@ -1,14 +1,45 @@
 <main class="main">
   <div class="content">
-    <div class="left-side">
+    <div class="left-side bg-slate-100">
       <router-outlet />
     </div>
-    <div class="right-side">
+    <div class="right-side p-2.5 bg-slate-100">
       <div class="flex items-center justify-center p-2.5">
           <img src="/assets/author.jpeg"  class="object-none w-36 h-36 rounded-full custom-position"/>
       </div>
       <div class="flex items-center justify-center">
         <h1>Quoc Nguyen</h1>
+      </div>
+      <div class="flex items-center justify-center">
+        <h3><strong>Software Developer</strong></h3>
+      </div>
+      <div class="items-center justify-center">
+        <p>I have over 9 years of experience as a Software Engineer specializing in Full Stack Application development using:</p>
+      </div>
+      <div class="flex items-center justify-center">
+        <ul class="skills-stack list-disc">
+          <li><strong>Angular</strong> | <strong>Ionic</strong> | <strong>.NET Maui</strong></li>
+          <li><strong>Blazor Webassembly</strong> | <strong>Asp.net MVC</strong></li>
+          <li><strong>.NET Core Web API</strong> | <strong>Minimal API</strong></li>
+          <li><strong>Azure Cloud Platform</strong></li>
+        </ul>
+      </div>
+      <div class="flex items-center justify-center">
+        <a href="https://www.linkedin.com/in/quoc-nguyen-dang/">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+        </a>
+        <a style="margin-right: 2px;" href="https://github.com/QuocNguyen2501">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48M277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8c0-5.4.2-33 .2-55.3c0-15.6-5.2-25.5-11.3-30.7c37-4.1 76-9.2 76-73.1c0-18.2-6.5-27.3-17.1-39c1.7-4.3 7.4-22-1.7-45c-13.9-4.3-45.7 17.9-45.7 17.9c-13.2-3.7-27.5-5.6-41.6-5.6c-14.1 0-28.4 1.9-41.6 5.6c0 0-31.8-22.2-45.7-17.9c-9.1 22.9-3.5 40.6-1.7 45c-10.6 11.7-15.6 20.8-15.6 39c0 63.6 37.3 69 74.3 73.1c-4.8 4.3-9.1 11.7-10.6 22.3c-9.5 4.3-33.8 11.7-48.3-13.9c-9.1-15.8-25.5-17.1-25.5-17.1c-16.2-.2-1.1 10.2-1.1 10.2c10.8 5 18.4 24.2 18.4 24.2c9.7 29.7 56.1 19.7 56.1 19.7c0 13.9.2 36.5.2 40.6c0 4.3-3 9.5-11.5 8c-66-22.1-112.2-84.9-112.2-158.3c0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3m-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7c-.2-1.5 1.1-2.8 3-3.2c1.9-.2 3.7.6 3.9 1.9c.3 1.3-1 2.6-3 3m-9.5-.9c0 1.3-1.5 2.4-3.5 2.4c-2.2.2-3.7-.9-3.7-2.4c0-1.3 1.5-2.4 3.5-2.4c1.9-.2 3.7.9 3.7 2.4m-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3c-1.9-.4-3.2-1.9-2.8-3.2c.4-1.3 2.4-1.9 4.1-1.5c2 .6 3.3 2.1 2.8 3.4m-12.3-5.4c-.9 1.1-2.8.9-4.3-.6c-1.5-1.3-1.9-3.2-.9-4.1c.9-1.1 2.8-.9 4.3.6c1.3 1.3 1.8 3.3.9 4.1m-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3c1.1 1.5 1.1 3.3 0 4.1m-6.5-9.7c-.9.9-2.4.4-3.5-.6c-1.1-1.3-1.3-2.8-.4-3.5c.9-.9 2.4-.4 3.5.6c1.1 1.3 1.3 2.8.4 3.5m-6.7-7.4c-.4.9-1.7 1.1-2.8.4c-1.3-.6-1.9-1.7-1.5-2.6c.4-.6 1.5-.9 2.8-.4c1.3.7 1.9 1.8 1.5 2.6"/></svg>
+        </a>
+        <a href="https://www.upwork.com/freelancers/~0162f5d6d3f9c94826?viewMode=1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 448 512"><path fill="currentColor" d="M56 32h336c30.9 0 56 25.1 56 56v336c0 30.9-25.1 56-56 56H56c-30.9 0-56-25.1-56-56V88c0-30.9 25.1-56 56-56m214.9 242.2c6.6-52.9 25.9-69.5 51.4-69.5c25.3 0 44.9 20.2 44.9 49.7s-19.7 49.7-44.9 49.7c-27.9 0-46.3-21.5-51.4-29.9m-26.7-41.8c-8.2-15.5-14.3-36.3-19.2-55.6h-62.9v78.1c0 28.4-12.9 49.4-38.2 49.4S84.1 283.4 84.1 255l.3-78.1H48.2V255c0 22.8 7.4 43.5 20.9 58.2c13.9 15.2 32.8 23.2 54.8 23.2c43.7 0 74.2-33.5 74.2-81.5v-52.5c4.6 17.3 15.4 50.5 36.2 79.7L215 392.6h36.8l12.8-78.4c4.2 3.5 8.7 6.6 13.4 9.4c12.3 7.8 26.4 12.2 40.9 12.6h3.4c45.1 0 80.9-34.9 80.9-81.9s-35.9-82.2-80.9-82.2c-45.4 0-70.9 29.7-78.1 60.1z"/></svg>
+        </a>
+      </div>
+      <div class="flex items-center justify-center">
+        <p>Available for freelance projects.</p>
+      </div>
+      <div class="flex items-center justify-center">
+        <p>Contact me for more details.</p>
       </div>
     </div>
   </div>

@@ -1,0 +1,2 @@
+export const description = 'Quoc Nguyen is a freelance Software Developer with over 9 years of experience specializing in Full Stack Application development using Angular, Ionic, .NET Maui, Blazor Webassembly, Asp.net MVC, .NET Core Web API, Minimal API, and Azure Cloud Platform. Available for freelance projects.';
+export const title = 'Quoc Nguyen - Freelance Full Stack Developer';
