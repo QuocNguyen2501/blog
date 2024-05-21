@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { PostModel } from '../models/post.model';
 import { UtilsService } from './utils.service';
 import xml2js  from 'xml2js'
-import { Observable, map, take } from 'rxjs';
+import { Observable, catchError, map, of, take } from 'rxjs';
+import { rssFeedUrl} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ import { Observable, map, take } from 'rxjs';
 export class MediumService {
   private posts: PostModel[] = [];
 
-  private readonly rssFeedUrl = 'https://medium.com/feed/@quocnguyen2501';
+ 
 
   constructor(
     private http: HttpClient,
@@ -22,12 +23,16 @@ export class MediumService {
 
 
   public getPostsFromMedium():Observable<PostModel[]>{
-    return this.http.get(this.rssFeedUrl,{ responseType: 'text' })
+    return this.http.get(rssFeedUrl,{ responseType: 'text' })
     .pipe(
       take(1),
       map(data=>{
         this.posts = this.parseRSS(data);
         return this.posts;
+    }),
+    catchError((err:Error) =>{
+      console.error(err);
+      return of(this.posts);
     }));
   }
 

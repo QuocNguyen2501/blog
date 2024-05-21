@@ -1,0 +1,1 @@
+export const rssFeedUrl = 'https://medium.com/feed/@quocnguyen2501';

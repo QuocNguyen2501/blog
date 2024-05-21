@@ -3,7 +3,7 @@ import { MediumService } from '../providers/medium.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, of, switchMap, take } from 'rxjs';
 import { PostModel } from '../models/post.model';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 
 @Component({
   selector: 'app-post',
@@ -16,12 +16,14 @@ import { CommonModule } from '@angular/common';
   encapsulation: ViewEncapsulation.None
 })
 export class PostComponent implements OnInit{
+
   
   public post: PostModel | undefined;
 
   constructor(
     private activatedRoute: ActivatedRoute, 
     private mediumService: MediumService,
+    private location: Location, 
   ) {
     
   }
@@ -38,5 +40,9 @@ export class PostComponent implements OnInit{
       .subscribe(post=>{
         this.post = post;
     });
+  }
+
+  back() {
+    this.location.back();
   }
 }

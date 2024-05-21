@@ -1,14 +1,17 @@
 <div class="flex flex-wrap p-5">
-    <div *ngFor="let post of posts" style="height: 460px;" class="post mr-4 mb-4 max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full" style="height: 187px;"  [src]="post.img" alt="{{post.title}}">
-        <div style="height: 215px;" class="px-6 py-4">
-            <div class="font-bold text-xl mb-2 cursor-pointer" (click)="read(post.path)">{{post.title}}</div>
-            <p  class="text-gray-700 text-base">
-                {{post.description}}
-            </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-            <span class="inline-block float-right cursor-pointer bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" (click)="read(post.path)">Read</span>
+    <div class="ads w-1/12 max-h-dvh"></div>
+    <div class="w-11/12 flex flex-wrap">
+        <div *ngFor="let post of posts" style="height: 460px;" class="post mr-4 mb-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" style="height: 187px;"  [src]="post.img" alt="{{post.title}}">
+            <div style="height: 215px;" class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 cursor-pointer" (click)="read(post.path)">{{post.title}}</div>
+                <p  class="text-gray-700 text-base">
+                    {{post.description}}
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <span class="inline-block float-right cursor-pointer bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" (click)="read(post.path)">Read</span>
+            </div>
         </div>
     </div>
 </div>
