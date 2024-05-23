@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @Component({
     selector: 'app-root',
@@ -10,6 +11,7 @@ import { RouterOutlet } from '@angular/router';
     imports: [
       RouterOutlet, 
       HttpClientModule,
+      LoadingComponent
     ]
 })
 export class AppComponent {
