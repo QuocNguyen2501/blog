@@ -18,3 +18,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 This is a preliminary plan, as it depends on my budget. If I don't have sufficient funds to keep the page online continuously, I will write an article on Medium explaining how to implement the following process.
 ![alt text](/myblog.png)
 
+
+## Future features
+- Add Google Adsense by ng2-adsense  https://www.npmjs.com/package/ng2-adsense
+- Add Google Analytics
+- Implement virtual scroll if there are many post
