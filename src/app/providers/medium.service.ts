@@ -40,6 +40,10 @@ export class MediumService {
     return this.posts.find(x=>x.path===path);
   }
 
+  public getPostFromRSS(path:string): Observable<PostModel|undefined>{
+    return this.getPostsFromMedium().pipe(map(posts=> posts.find(p=>p.path === path)));
+  }
+
   private parseRSS(rss:string): PostModel[]{
     let result: any;
     xml2js.parseString(rss, { trim: true, mergeAttrs: true }, (err, parsedResult) => {

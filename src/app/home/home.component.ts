@@ -43,14 +43,13 @@ export class HomeComponent implements OnInit {
   
   private setTitleAndMetaTags(){
     this.titleService.setTitle(title);
-    this.metaService.addTags([
-      { name: 'description', content: description },
-      { name: 'keywords', content: 'Quoc Nguyen, Freelance Developer, Software Developer, Full Stack Developer, Angular, Ionic, .NET Maui, Blazor, Asp.net MVC, .NET Core, Web API, Azure, Programming, Freelance' },
-      { name: 'robots', content: 'index, follow' },
-      { property: 'og:title', content: title },
-      { property: 'og:description', content: description },
-      { property: 'og:type', content: 'profile' },
-    ]);
+    
+    this.metaService.updateTag({ name: 'description', content: description })
+    this.metaService.updateTag({ name: 'keywords', content: 'Quoc Nguyen, Freelance Developer, Software Developer, Full Stack Developer, Angular, Ionic, .NET Maui, Blazor, Asp.net MVC, .NET Core, Web API, Azure, Programming, Freelance' })
+    this.metaService.updateTag( { name: 'robots', content: 'index, follow' })
+    this.metaService.updateTag( { property: 'og:title', content: title })
+    this.metaService.updateTag( { property: 'og:description', content: description })
+    this.metaService.updateTag( { property: 'og:type', content: 'profile' })
   }
 
 

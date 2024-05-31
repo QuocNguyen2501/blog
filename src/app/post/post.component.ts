@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MediumService } from '../providers/medium.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { map, of, switchMap, take } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { map, switchMap, take } from 'rxjs';
 import { PostModel } from '../models/post.model';
 import { CommonModule, Location } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-post',
@@ -24,6 +25,8 @@ export class PostComponent implements OnInit{
     private activatedRoute: ActivatedRoute, 
     private mediumService: MediumService,
     private location: Location, 
+    private titleService: Title,
+    private metaService: Meta,
   ) {
     
   }
@@ -35,10 +38,19 @@ export class PostComponent implements OnInit{
         return p['path'];
       }),
       switchMap((path:string)=>{
-        return of(this.mediumService.getPost(path));
+        return this.mediumService.getPostFromRSS(path);
       }))
       .subscribe(post=>{
-        this.post = post;
+        if(post){
+          this.post = post;
+          this.titleService.setTitle(this.post.title);
+          this.metaService.updateTag({ name: 'description', content: this.post.description })
+          this.metaService.updateTag({ name: 'keywords', content: this.post.title })
+          this.metaService.updateTag({ name: 'robots', content: 'index, follow' })
+          this.metaService.updateTag({ property: 'og:title', content: this.post.title })
+          this.metaService.updateTag({ property: 'og:description', content: this.post.description })
+          this.metaService.updateTag({ property: 'og:type', content: 'profile' })
+        }
     });
   }
 
